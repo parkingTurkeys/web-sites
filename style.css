@@ -1,0 +1,34 @@
+body {
+    background-color: #ffff00;
+    color: #ff00ff;
+    font-family: "Comic Sans MS", serif;
+    padding: 0;
+    margin: 0;
+}
+
+body.no-css {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-family: serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ff0000;
+    font-family: "Jokerman", "Comic Sans MS", serif;
+}
+
+table, td, th {
+    border-style: solid;
+    border-color: #ff0000;
+}
+
+table {
+    table-layout: fixed;
+    width: 70%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+@media (max-width: 1000px) {
+    table {width:100%;}
+}
