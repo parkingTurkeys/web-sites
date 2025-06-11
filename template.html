@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Template</title>
+        <link href = "style.css" rel = "stylesheet">
+        <script src = "script.js"></script>
+    </head>
+    <body id = "body" class = "css">
+        <h1>Template</h1>
+        <button id = "css-toggle" onclick = "toggleReadability()">this is unreadable</button>
+        <div id="table"></div>
+        <script>
+            source = [
+                ["<h2>First Column Heading</h2>", "bla", "bla", "bla", "bla"],
+                ["<h2>Second Column Header</h2>", "second column contents"],
+                ["<h2>Third Column Header</h2>", "third column contents"],
+            ]
+            setTimeout(loady, 100)
+            function loady() {
+                document.getElementById("table").innerHTML += generateTable(source)
+            }   
+        </script>
+    </body>
+
+</html>
