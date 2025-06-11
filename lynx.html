@@ -7,15 +7,16 @@
     </head>
     <body id = "body" class = "css">
         <h1>Why Lynx is objectively better than Gallagher (probably misinformation)</h1>
+        <img src = "art.png"><br />
         <button id = "css-toggle" onclick = "toggleReadability()">this is unreadable</button>
         <div id="comparasin"></div>
         <script>
             source = [
-                ["<h2>Reasoning</h2>","Has a healing ultimate", "Has a way to heal multiple characters at once", "Has yuri", "Is alive", "Lives on the objectively best planet", "Yuri (again)", "Works well with Clara (and presumably Yunli)", "Actually useful skills (IRL)", "Real character interactions", "Actually focuses on healing instead of being a mid sub-DPS", "Has a non-Eidolon effect cleanse", "debuff resist", "Has a cool name that isn't literally the planet they live on", "Has a good Companion Quest (with yuri)", "Doesn't have the only cool thing about them be a random other character that is vaguely connected to them", "🏳‍🌈", "Has cat ears", "Has a good ultimate animation", "Has a technique you can use on bosses"],
+                ["<h2>Reasoning</h2>","Has a healing ultimate", "Has a way to heal multiple characters at once", "Has yuri", "Is alive", "Free", "Lives on the objectively best planet", "Yuri (again)", "Works well with Clara (and presumably Yunli)", "Actually useful skills (IRL)", "Real character interactions", "Actually focuses on healing instead of being a mid sub-DPS", "Has a non-Eidolon effect cleanse", "debuff resist", "Has a cool name that isn't literally the planet they live on", "Has a good Companion Quest (with yuri)", "Doesn't have the only cool thing about them be a random other character that is vaguely connected to them", "🏳‍🌈", "Has cat ears", "Has a good ultimate animation", "Has a technique you can use on bosses"],
                 ["<h2>Lynx</h2>", "✅"],
                 ["<h2>Gallagher</h2>", "❌"],
             ]
-            setTimeout(loady, 100)
+            setTimeout(loady, 0)
             function loady() {
                 document.getElementById("comparasin").innerHTML += generateTable(source)
             }   

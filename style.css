@@ -29,6 +29,10 @@ table {
     margin: auto;
 }
 
+img {
+    width: 100%
+}
+
 @media (max-width: 1000px) {
     table {width:100%;}
 }
