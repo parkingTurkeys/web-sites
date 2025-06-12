@@ -7,18 +7,31 @@
     </head>
     <body id = "body" class = "css">
         <h1>Why Lynx is objectively better than Gallagher (probably misinformation)</h1>
-        <img src = "art.png"><br />
+        <div id="head-image"><img src = "art.png" alt = "A comparison of two characters. Lynx has the text "></div><br />
         <button id = "css-toggle" onclick = "toggleReadability()">this is unreadable</button>
-        <div id="comparasin"></div>
+        
+        <div id="kommpairasion"></div>
+        <div id="essay"></div>
+        <div id="quotes"></div>
+        <div id="images"></div>
+        <div id="sources"></div>
         <script>
             source = [
                 ["<h2>Reasoning</h2>","Has a healing ultimate", "Has a way to heal multiple characters at once", "Has yuri", "Is alive", "Free", "Lives on the objectively best planet", "Yuri (again)", "Works well with Clara (and presumably Yunli)", "Actually useful skills (IRL)", "Real character interactions", "Actually focuses on healing instead of being a mid sub-DPS", "Has a non-Eidolon effect cleanse", "debuff resist", "Has a cool name that isn't literally the planet they live on", "Has a good Companion Quest (with yuri)", "Doesn't have the only cool thing about them be a random other character that is vaguely connected to them", "🏳‍🌈", "Has cat ears", "Has a good ultimate animation", "Has a technique you can use on bosses"],
                 ["<h2>Lynx</h2>", "✅"],
                 ["<h2>Gallagher</h2>", "❌"],
             ]
+
+            essay = [
+                "this is a placeholder essay",
+                "it has several paragraphs!",
+                "yeah.",
+                "the earth needs the sauce of CNN, the salad that is always wise, let it be the adipiscing salad, but not the salad itself!"
+            ]
+
             setTimeout(loady, 0)
             function loady() {
-                document.getElementById("comparasin").innerHTML += generateTable(source)
+                document.getElementById("kommpairasion").innerHTML += generateTable(source)
             }   
         </script>
     </body>

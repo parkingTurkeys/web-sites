@@ -1,6 +1,7 @@
 let readable = false
 
 function generateTable(source) {
+    //rows and columns are switched :)
     //rows AND columns ARE ONE MORE THAN THE INDEX OF THE LAST ITEM
     let rows = source.length
     let columns = 0
@@ -48,5 +49,11 @@ function toggleReadability() {
         document.getElementById('css-toggle').innerHTML = "this is far too readable"
         document.getElementById('body').className = 'no-css'
         readable = true
+    }
+}
+
+function printEssay(essarray, id) {
+    for (i = 0; i < essarray.length; i++) {
+        document.getElementById(id).innerHTML += "<p>" + essarray[i] + "</p>"
     }
 }

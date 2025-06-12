@@ -30,9 +30,14 @@ table {
 }
 
 img {
-    width: 100%
+    width: 50%;
+}
+
+#head-image {
+    text-align: center;
 }
 
 @media (max-width: 1000px) {
     table {width:100%;}
+    img {width: 90%;}
 }
