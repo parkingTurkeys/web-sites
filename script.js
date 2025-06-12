@@ -54,7 +54,7 @@ function generateTable(source, shuffle = false) {
         table += "<tr>"
         for (n = 0; n < rows; n++) {
             //each individual cell
-            if (source[n].origlength - 1 /*the length of each column; are we to the point of needing repeats*/ <= i) {
+            if (source[n].origlength - 1 /*don't ask*/ /*the length of each column; are we to the point of needing repeats*/ <= i) {
                 //repeat due to the fact that we have reached the repeat point
                 table += "<td>" + source[n][source[n].length - 1] + "</td>"
             } else {
