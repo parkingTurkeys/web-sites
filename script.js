@@ -54,6 +54,18 @@ function toggleReadability() {
     }
 }
 
+function toggleDarkMode() {
+    document.getElementById('body').classList.toggle('light')
+    document.getElementById('body').classList.toggle('dark')
+    if (document.getElementById('body').classList.contains('light')) {
+        document.getElementById('darkmode-toggle').innerHTML = "MY EYES"
+        dark = false
+    } else {
+        document.getElementById('darkmode-toggle').innerHTML = "<div style = 'letter-spacing: 1rem; font-variant: small-caps;'>make it brighter</div>"
+        dark = true
+    }
+}
+
 function printEssay(essarray, id) {
     for (i = 0; i < essarray.length; i++) {
         document.getElementById(id).innerHTML += "<p>" + essarray[i] + "</p>"

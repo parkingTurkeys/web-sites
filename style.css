@@ -7,7 +7,18 @@ body {
     margin: 0;
 }
 
-body#body.no-css *{
+body#body.dark {
+    background-color: #0000ff;
+    color: #ffff00;
+}
+
+body#body.no-css.dark {
+    background-color: #141414;
+    color: #ececec;
+    font-family: serif ;
+}
+
+body#body.no-css.light *, body#body.no-css.light{
     background-color: #ffffff ;
     color: #000000 ;
     font-family: serif ;
@@ -21,6 +32,11 @@ h1, h2, h3, h4, h5, h6 {
 table, td, th {
     border-style: solid;
     border-color: #ff0000;
+}
+
+table.no-css, td.no-css, th.no-css {
+    border-style: solid;
+    border-color: #000000;
 }
 
 table {
