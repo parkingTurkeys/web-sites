@@ -73,3 +73,7 @@ img {
     font-size: 1.5rem;
     font-family:'Times New Roman', Times, serif;
 }
+
+h3, h3+p /*stack overflow again*/ {
+    display:inline;
+}
