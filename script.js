@@ -10,7 +10,7 @@ function checkPreferences() {
                 break;
         }
     } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) /*got this from stack overflow ~(￣▽￣)~*/ {
-
+        toggleDarkMode()
     }
     if (window.localStorage.getItem("csson")) {
         switch (window.localStorage.getItem("csson")) {
