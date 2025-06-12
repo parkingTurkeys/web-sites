@@ -24,15 +24,16 @@
             ]
 
             essay = [
-                "this is a placeholder essay",
+                "<h2>this is a placeholder essay</h2>",
                 "it has several paragraphs!",
-                "yeah.",
+                "<h3>yeah.</h3>",
                 "the earth needs the sauce of CNN, the salad that is always wise, let it be the adipiscing salad, but not the salad itself!"
             ]
 
             setTimeout(loady, 0)
             function loady() {
                 document.getElementById("kommpairasion").innerHTML += generateTable(source, false)
+                printEssay(essay, "essay")
             }   
         </script>
     </body>

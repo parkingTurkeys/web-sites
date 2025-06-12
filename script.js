@@ -45,11 +45,13 @@ function generateTable(source, shuffle = false) {
 function toggleReadability() {
     if (readable) {
         document.getElementById('css-toggle').innerHTML = "this is unreadable"
-        document.getElementById('body').className = 'css'
+        document.getElementById('body').classList.remove('no-css')
+        document.getElementById('body').classList.add('css')
         readable = false
     } else {
         document.getElementById('css-toggle').innerHTML = "this is far too readable"
-        document.getElementById('body').className = 'no-css'
+        document.getElementById('body').classList.add('no-css')
+        document.getElementById('body').classList.remove('css')
         readable = true
     }
 }
