@@ -1,7 +1,7 @@
 let readable = false
 
 
-function generateTable(source) {
+function generateTable(source, shuffle = false) {
     //rows and columns are switched :)
     //rows AND columns ARE ONE MORE THAN THE INDEX OF THE LAST ITEM
     let rows = source.length
@@ -29,7 +29,7 @@ function generateTable(source) {
                 table += "<td>" + source[n][source[n].length - 1] + "</td>"
             } else {
                 //we still have data left!
-                table += "<td>" + getAndRemoveRandItem(source[n], []) + "</td>"
+                if (shuffle) {table += "<td>" + getAndRemoveRandItem(source[n], []) + "</td>"} else {table += "<td>" + source[n][i] + "</td>"}
             }
         }
         //end the row
