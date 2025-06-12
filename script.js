@@ -37,25 +37,30 @@ function generateTable(source, shuffle = false) {
     for (i = 0; i < rows; i++) {
         if (source[i].length > columns) {
             columns = source[i].length
-            source[i].splice(0, 1)
+            
         }
+        source[i].origlength = source[i].length
+        dbg(source[i].origlength)
     }
     //for the first row
     for (n = 0; n < rows; n++) {
         //each individual cell
         table += "<th>" + source[n][0] + "</th>"
+        source[n].splice(0, 1)
+        dbg(source[n])
     }
     for (i = 1; i < columns; i++) {
         //for each row after the first
         table += "<tr>"
         for (n = 0; n < rows; n++) {
             //each individual cell
-            if (source[n].length /*the length of each column; are we to the point of needing repeats*/ <= i) {
+            if (source[n].origlength - 1 /*the length of each column; are we to the point of needing repeats*/ <= i) {
                 //repeat due to the fact that we have reached the repeat point
                 table += "<td>" + source[n][source[n].length - 1] + "</td>"
             } else {
                 //we still have data left!
                 if (shuffle) {table += "<td>" + getAndRemoveRandItem(source[n], []) + "</td>"} else {table += "<td>" + source[n][i] + "</td>"}
+                dbg(source[i])
             }
         }
         //end the row
