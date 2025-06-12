@@ -1,9 +1,10 @@
 let readable = false
 
 function checkPreferences() {
-    if (window.localStorage.getItem("lightmodeon")) {
+    if (window.localStorage.getItem("lightmodeon") && window.localStorage.getItem("auto")) {
         switch (window.localStorage.getItem("lightmodeon")) {
             case "yes":
+                window.localStorage.setItem("auto", true)
                 break;
             case "no":
                 toggleDarkMode()
@@ -11,6 +12,7 @@ function checkPreferences() {
         }
     } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) /*got this from stack overflow ~(￣▽￣)~*/ {
         toggleDarkMode()
+        window.localStorage.setItem("auto", true)
     }
     if (window.localStorage.getItem("csson")) {
         switch (window.localStorage.getItem("csson")) {
@@ -86,11 +88,13 @@ function toggleDarkMode() {
     if (document.getElementById('body').classList.contains('light')) {
         document.getElementById('darkmode-toggle').innerHTML = "MY EYES"
         window.localStorage.setItem("lightmodeon", "yes")
+        window.localStorage.setItem("auto", false)
         dark = false
     } else {
         document.getElementById('darkmode-toggle').innerHTML = "<div style = 'letter-spacing: 1rem; font-variant: small-caps;'>make it brighter</div>"
         dark = true
         window.localStorage.setItem("lightmodeon", "no")
+        window.localStorage.setItem("auto", false)
     }
 }
 
