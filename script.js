@@ -43,15 +43,13 @@ function generateTable(source, shuffle = false) {
 //source is an array with rows amount of arrays where columns is the amount of items in the largest array; rows is the width of the table and columns is the height 
 
 function toggleReadability() {
-    if (readable) {
+    document.getElementById('body').classList.toggle('css')
+    document.getElementById('body').classList.toggle('no-css')
+    if (document.getElementById('body').classList.contains('css')) {
         document.getElementById('css-toggle').innerHTML = "this is unreadable"
-        document.getElementById('body').classList.remove('no-css')
-        document.getElementById('body').classList.add('css')
         readable = false
     } else {
         document.getElementById('css-toggle').innerHTML = "this is far too readable"
-        document.getElementById('body').classList.add('no-css')
-        document.getElementById('body').classList.remove('css')
         readable = true
     }
 }
