@@ -1,5 +1,6 @@
 let readable = false
 
+
 function generateTable(source) {
     //rows and columns are switched :)
     //rows AND columns ARE ONE MORE THAN THE INDEX OF THE LAST ITEM
@@ -10,6 +11,7 @@ function generateTable(source) {
     for (i = 0; i < rows; i++) {
         if (source[i].length > columns) {
             columns = source[i].length
+            source[i].splice(0, 1)
         }
     }
     //for the first row
@@ -27,7 +29,7 @@ function generateTable(source) {
                 table += "<td>" + source[n][source[n].length - 1] + "</td>"
             } else {
                 //we still have data left!
-                table += "<td>" + source[n][i] + "</td>"
+                table += "<td>" + getAndRemoveRandItem(source[n], []) + "</td>"
             }
         }
         //end the row
@@ -56,4 +58,18 @@ function printEssay(essarray, id) {
     for (i = 0; i < essarray.length; i++) {
         document.getElementById(id).innerHTML += "<p>" + essarray[i] + "</p>"
     }
+}
+
+function getAndRemoveRandItem(array, ignore) {
+    
+    reuse = Math.floor(Math.random() * array.length)
+    if (ignore.includes(reuse)) {
+        //try again! :DDD very good strategy
+        console.log("try again :heavysob:")
+        reuse = getAndRemoveRandItem(array, ignore)
+        return reuse
+    }
+    reuse2 = array[reuse]
+    if (array.length > ignore.length /*check that there is more than one non-ignored left !*/) {array.splice(reuse, 1)}
+    return reuse2
 }
