@@ -1,5 +1,29 @@
 let readable = false
 
+function checkPreferences() {
+    if (window.localStorage.getItem("lightmodeon")) {
+        switch (window.localStorage.getItem("lightmodeon")) {
+            case "yes":
+                break;
+            case "no":
+                toggleDarkMode()
+                break;
+        }
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) /*got this from stack overflow ~(￣▽￣)~*/ {
+
+    }
+    if (window.localStorage.getItem("csson")) {
+        switch (window.localStorage.getItem("csson")) {
+            case "yes":
+                break;
+            case "no":
+                toggleReadability()
+                break;
+        }
+    }
+}
+
+
 
 function generateTable(source, shuffle = false) {
     //rows and columns are switched :)
@@ -47,9 +71,11 @@ function toggleReadability() {
     document.getElementById('body').classList.toggle('no-css')
     if (document.getElementById('body').classList.contains('css')) {
         document.getElementById('css-toggle').innerHTML = "this is unreadable"
+        window.localStorage.setItem("csson", "yes")
         readable = false
     } else {
         document.getElementById('css-toggle').innerHTML = "this is far too readable"
+        window.localStorage.setItem("csson", "no")
         readable = true
     }
 }
@@ -59,10 +85,12 @@ function toggleDarkMode() {
     document.getElementById('body').classList.toggle('dark')
     if (document.getElementById('body').classList.contains('light')) {
         document.getElementById('darkmode-toggle').innerHTML = "MY EYES"
+        window.localStorage.setItem("lightmodeon", "yes")
         dark = false
     } else {
         document.getElementById('darkmode-toggle').innerHTML = "<div style = 'letter-spacing: 1rem; font-variant: small-caps;'>make it brighter</div>"
         dark = true
+        window.localStorage.setItem("lightmodeon", "no")
     }
 }
 
