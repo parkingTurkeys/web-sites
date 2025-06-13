@@ -4,7 +4,6 @@ function checkPreferences() {
     if (window.localStorage.getItem("lightmodeon") && window.localStorage.getItem("auto")) {
         switch (window.localStorage.getItem("lightmodeon")) {
             case "yes":
-                window.localStorage.setItem("auto", true)
                 break;
             case "no":
                 toggleDarkMode()
