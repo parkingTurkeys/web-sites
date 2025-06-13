@@ -1,0 +1,14 @@
+<rss version="2.0">
+<channel>
+    <title>parking_turkeys' web-sites</title>
+    <link>https://p-t.hackclub.app/web-sites</link>
+    <description>a set of insane web-sites!</description>
+    <language>en-us</language>
+    <copyright> parking_turkeys' web-sites are licensed under the MIT license </copyright>
+    <docs>https://cyber.harvard.edu/rss/rss.html</docs>
+    <item>
+        <title>test blog post!</title>
+        <description><![CDATA[my name is emu ootori <div style = "font-size: 100px; color: pink">wonderhoy</div> emu is meaning smile]]></description>
+    </item>
+</channel>
+</rss>
