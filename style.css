@@ -7,6 +7,14 @@ body {
     margin: 0;
 }
 
+body#body.light a {
+    color:#0000ff;
+}
+
+body#body.dark a {
+    color:#c6c6ff;
+}
+
 body#body.dark {
     background-color: #0000ff;
     color: #ffff00;
@@ -57,11 +65,14 @@ img {
 @media (max-width: 1000px) {
     table {width:100%;}
     img {width: 90%;}
+    #essay {margin:2%}
 }
 
-#essay {
+.text {
     font-family:'Times New Roman', Times, serif;
     font-size: 1.25rem;
+    margin: 5%;
+    line-height: 2rem;
 }
 
 #essay h2 {

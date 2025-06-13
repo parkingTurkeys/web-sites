@@ -12,26 +12,34 @@
         <button id = "css-toggle" onclick = "toggleReadability()">this is unreadable</button>
         <button id = "darkmode-toggle" onclick = "toggleDarkMode()">MY EYES</button>
         <div id="kommpairasion"></div>
-        <div id="essay"></div>
-        <div id="quotes"></div>
+        <div id="essay" class = "text"></div>
+        <div id="quotes" class = "text"></div>
         <div id="images"></div>
-        <div id="sources">
+        <div id="sources" class = "text cite">
             <span id = 1><a href = https://honkai-star-rail.fandom.com/wiki/Lynx/Combat#Abilities>[1] - Honkai Star Rail Fandom - Lynx Landau - Abilities</a></span>
         </div>
         <script>
-            alert("this is probably misinformation o(〃＾▽＾〃)o")
+            //alert("this is probably misinformation o(〃＾▽＾〃)o")
             source = [
                 ["<h2>Reasoning</h2>","Has a healing ultimate", "Has a way to heal multiple characters at once", "Has yuri", "Is alive", "Free", "Lives on the objectively best planet", "Yuri (again)", "Works well with Clara (and presumably Yunli)", "Actually useful skills (IRL)", "Real character interactions", "Actually focuses on healing instead of being a mid sub-DPS", "Has a non-Eidolon effect cleanse", "debuff resist", "Has a cool name that isn't literally the planet they live on", "Has a good Companion Quest (with yuri)", "Doesn't have the only cool thing about them be a random other character that is vaguely connected to them", "🏳‍🌈", "Has cat ears", "Has a good ultimate animation", "Has a technique you can use on bosses"],
                 ["<h2>Lynx</h2>", "✅"],
                 ["<h2>Gallagher</h2>", "❌"],
             ]
-
+            //note: add e2 so links work
             essay = [
+                "<h2 style = 'color: red;'>WARNING: THIS INFO PROBABLY DOES NOT APPLY IN REALLY HARD ENDGAME MODES AND STUFF SINCE I DON'T PLAY THEM :DDD</h2>",
                 "<h2 id = 'in_game'>In Game</h2>",
                 "Lynx is actually a powerful healer in-game, even if a lot of people say that 'GaLlAgHeR iS wAaAaAaY bEtTeR tHaN lYnX.' Lynx's skills can be very useful, specifically for certain scenarios.",
                 "<h3 id = 'ultimate'>Ultimate</h3><i> or: not turn restricted healing</i>",
-                "Lynx's Ultimate is an essential part of her character design and kit. While other, <span title = 'Gallagher'>less cool healers</span>, might have a <b>damaging</b> Ultimate, Lynx's Ultimate is basic, and therefore <i>very useful</i>.",
-                "It '[d]ispels 1 debuff(s) from all allies and immediately restores their respective HP by an amount equal to 9%—14.4% of Lynx's Max HP plus 90—400.5.'<sup><a href = #1>[1]</a></sup>"
+                "Lynx's Ultimate is an essential part of her character design and kit. While other <span title = 'Gallagher'>less cool healers</span>, might have a <b>damaging</b> Ultimate, Lynx's Ultimate is basic, and therefore <i>very useful</i>.",
+                "It '[d]ispels 1 debuff(s) from all allies and immediately restores their respective HP by an amount equal to 9%—14.4% of Lynx's Max HP plus 90—400.5.'<sup class = 'cite'><a href = #1>[1]</a></sup>",
+                "This is useful in several scenarios. For example, you could use it if some of your characters have crowd control effects (freeze, entanglement, etc.) so that they can attack sooner. It might even be doable, if you have her <a href = #e2>second eidolon</a>, to heal Lynx with her skill every few turns; this way she would have an Effect Resist. This would be useful in that then she could use her Ultimate to remove effects from the other characters.",
+                "This is feasible due to the fact that her Ultimate actually charges fairly quickly. You may think this means that Lynx has abilities that regain high amounts of Energy, or a particularly low Energy. Her Energy cost is on the lower side at 100 (The highest is Aglaea at 350; the lowest are Natasha and Argenti, however most 4 stars seem to hover around 100 to 120), but her skills are the default Energy regeneration rate--her Basic Attack regenerates 20 and her Skill regenerates 30.",
+                "The real difference about Lynx's mechanics are that [unlike <i title='Gallagher'>some other characters</i>], her Basic Attack kind of sucks. It does 25-55% of her Max HP as damage. Actually, this <i>does</i> do more damage than Natasha's basic attack at Level 0(On another note, why is Natasha supposed to be a really good fighter and healer in canon but she sucks in-game?), and would presumably scale well seeing as her healing is also done as percentages of Max HP. ",
+                "Why is this good? Well, it's not really about the actual quality of the attack, but more that it means that you are more likely to use her Skill. I usually heal with Lynx at <i>least</i> every other turn, and that's only in fights where my characters aren't taking too much damage. Anyways, if you're doing that and healing every other turn, without any sort of buff on energy regeneration and without getting attacked, it'll take you... (5+)30+20+30+20=100 ... 4ish turns to regenerate her Ultimate. This is not even including Energy from being hit by attacks. ",
+                "<h3 id = 'skill'>Skill</h3><i> or: Debuff Resist, Aggro, Max HP increase, <span title = 'not Herrscher of Thunder'>HoT</span>, Sardines",
+                "Lynx's skill is a pretty default Abundance skill. It heals<sup>tm</sup> a single ally target. However, it also has some special effects.",
+                "First, the most obvious: HoT. HoT stands for <s>Herrscher of Thunder</s> Healing over Time. Lynx's abilities all rely on Healing over Time (abbreviated as HoT from here one). This means that to receive most of the healing, the characters who were healed need to take a turn. Lynx's HoT persists for 2 turns, which increases to 3 after you get one of her Bonus Abilities."
             ]
 
             setTimeout(loady, 0)
