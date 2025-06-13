@@ -6,7 +6,9 @@
         <script src = "script.js"></script>
         <script src = "useful.js"></script>
     </head>
-    <body id = "body" class = "css light" >
+    <body id = "body" class = "css light" onload = "checkPreferences()">
+        <noscript><a href = "no-js/lynx.html">this version works without js</a></noscript>
+        <a href = "no-js/lynx.html">is this loading slowly/not loading? here's a version that should work faster! it also has even less CSS.</a>
         <h1>Why Lynx is objectively better than Gallagher (probably misinformation)</h1>
         <div id="head-image"><img src = "imgs/lynx-v-gallagher.png" alt = "A comparison of two characters. Lynx has the text "></div><br />
         <button id = "css-toggle" onclick = "toggleReadability()">this is unreadable</button>
@@ -16,19 +18,20 @@
         <div id="quotes" class = "text"></div>
         <div id="images"></div>
         <div id="sources" class = "text cite">
-            <span id = 1><a href = https://honkai-star-rail.fandom.com/wiki/Lynx/Combat#Abilities>[1] - Honkai Star Rail Fandom - Lynx Landau - Abilities</a></span>
+            <span id = 1><a href = https://honkai-star-rail.fandom.com/wiki/Lynx/Combat#Abilities>[1] Lynx's Combat Mechanics | Honkai: Star Rail Wiki | Fandom</a></span><br />
+            <span id = 2><a href = https://honkai-star-rail.fandom.com/wiki/Aggro>[2] Aggro | Honkai: Star Rail Wiki | Fandom</a></span>
         </div>
         <script>
             //alert("this is probably misinformation o(〃＾▽＾〃)o")
             source = [
-                ["<h2>Reasoning</h2>","Has a healing ultimate", "Has a way to heal multiple characters at once", "Has yuri", "Is alive", "Free", "Lives on the objectively best planet", "Yuri (again)", "Works well with Clara (and presumably Yunli)", "Actually useful skills (IRL)", "Real character interactions", "Actually focuses on healing instead of being a mid sub-DPS", "Has a non-Eidolon effect cleanse", "debuff resist", "Has a cool name that isn't literally the planet they live on", "Has a good Companion Quest (with yuri)", "Doesn't have the only cool thing about them be a random other character that is vaguely connected to them", "🏳‍🌈", "Has cat ears", "Has a good ultimate animation", "Has a technique you can use on bosses"],
+                ["<h2>Reasoning</h2>","Has a healing ultimate", "Has a way to heal multiple characters at once", "Has yuri", "Is alive", "Free", "Lives on the objectively best planet", "Yuri (again)", "Works well with Clara (and presumably Yunli)", "Actually useful skills (IRL)", "Real character interactions", "Actually focuses on healing instead of being a mid sub-DPS", "Has a non-Eidolon effect cleanse", "debuff resist", "Has a cool name that isn't literally the planet they live on", "Has a good Companion Quest (with yuri)", "Doesn't have the only cool thing about them be a random other character that is vaguely connected to them", "🏳‍🌈 content in game ", "Has cat ears", "Has a good ultimate animation", "Has a technique you can use on bosses"],
                 ["<h2>Lynx</h2>", "✅"],
                 ["<h2>Gallagher</h2>", "❌"],
             ]
             //note: add e2 so links work
             essay = [
                 "<h2 style = 'color: red;'>WARNING: THIS INFO PROBABLY DOES NOT APPLY IN REALLY HARD ENDGAME MODES AND STUFF SINCE I DON'T PLAY THEM :DDD</h2>",
-                "<h2 id = 'in_game'>In Game</h2>",
+                "<h2 id = 'in_game'>In Game</h2><i>This is basically misinformation, the other sections are a bit better</i>",
                 "Lynx is actually a powerful healer in-game, even if a lot of people say that 'GaLlAgHeR iS wAaAaAaY bEtTeR tHaN lYnX.' Lynx's skills can be very useful, specifically for certain scenarios.",
                 "<h3 id = 'ultimate'>Ultimate</h3><i> or: not turn restricted healing</i>",
                 "Lynx's Ultimate is an essential part of her character design and kit. While other <span title = 'Gallagher'>less cool healers</span>, might have a <b>damaging</b> Ultimate, Lynx's Ultimate is basic, and therefore <i>very useful</i>.",
@@ -40,7 +43,9 @@
                 "<h3 id = 'skill'>Skill</h3><i> or: Debuff Resist, Aggro, Max HP increase, <span title = 'not Herrscher of Thunder'>HoT</span>, and Sardines",
                 "Lynx's skill is a pretty default Abundance skill. It heals<sup>tm</sup> a single ally target. However, it also has some special effects.",
                 "First, the most obvious: HoT. HoT stands for <s>Herrscher of Thunder</s> Healing over Time. Lynx's abilities all rely on Healing over Time (abbreviated as HoT from here one). This means that to receive most of the healing, the characters who were healed need to take a turn. Lynx's HoT persists for 2 turns, which increases to 3 after you get one of her Bonus Abilities. It heals the target by '2.4%—3.8% of Lynx's Max HP plus 24—106.8 at the start of each turn'. This is even more if used with the skill, since when 'Survival Response' is present, her HoT heals the target by '3%—4.8% of Lynx's Max HP plus 30—133.5' HP.",
-                ""
+                "Next, her Max HP increase. Lynx's skill increases the target ally's Max HP while <i>also</i> healing them. This means that even if a character is at max health, you can still heal them!",
+                "Also, her <a href = '#e2'>second eidolon</a> grants characters with 'Survival Response' (the effect given to an ally healed with her skill) the ability to resist a debuff. This means if you heal a character and then they get attacked, the first debuff that they get is ignored.",
+                "Another thing about Lynx that I might even call one of her <i>most important</i> attributes is her 'Aggro' increase. 'Aggro' is a fanmade term to describe the likelyhood of a character being attacked."
             ]
 
             setTimeout(loady, 0)

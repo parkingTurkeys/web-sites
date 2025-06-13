@@ -1,7 +1,7 @@
 let readable = false
 
 function checkPreferences() {
-    if (window.localStorage.getItem("lightmodeon") && window.localStorage.getItem("auto")) {
+    /*if (window.localStorage.getItem("lightmodeon") && window.localStorage.getItem("auto")) {
         switch (window.localStorage.getItem("lightmodeon")) {
             case "yes":
                 break;
@@ -9,11 +9,11 @@ function checkPreferences() {
                 toggleDarkMode()
                 break;
         }
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) /*got this from stack overflow ~(￣▽￣)~*/ {
+    } else */if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) /*got this from stack overflow ~(￣▽￣)~*/ {
         toggleDarkMode()
         window.localStorage.setItem("auto", true)
     }
-    if (window.localStorage.getItem("csson")) {
+    /*if (window.localStorage.getItem("csson")) {
         switch (window.localStorage.getItem("csson")) {
             case "yes":
                 break;
@@ -21,7 +21,7 @@ function checkPreferences() {
                 toggleReadability()
                 break;
         }
-    }
+    }*/
 }
 
 
