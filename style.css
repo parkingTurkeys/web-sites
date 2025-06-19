@@ -85,7 +85,7 @@ img {
     font-family:'Times New Roman', Times, serif;
 }
 
-h3, h3+p /*stack overflow again*/ {
+h3, h3+p, h2, h2+p /*stack overflow again*/ {
     display:inline;
 }
 
