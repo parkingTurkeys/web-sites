@@ -89,4 +89,6 @@ h3, h3+p, h2, h2+p /*stack overflow again*/ {
     display:inline;
 }
 
-
+.comment {
+    color: #017501;
+}
