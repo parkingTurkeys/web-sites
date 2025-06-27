@@ -1,1 +1,3 @@
-make_blog_from_md.ps1
+# make_blog_from_md.ps1
+in/*
+out/*
