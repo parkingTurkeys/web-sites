@@ -4,15 +4,15 @@ $title = $markdown[0] -Split "# "
 $title = $title[1]
 $content = $markdown[1..($markdown.length - 1)]
 $end_content = ""
-$in_ul = false
-$in_ol = false
+$in_ul = 0
+$in_ol = 0
 echo $title
 for ($i = 0; $i -lt $content.length; $i++) {
     $line = $content[$i].ToCharArray()
     $test_char = $line[0]
     switch ($test_char) {
         "#" {
-            $header_level = "1"
+            $header_level = 1
             $n = 0
             while ($test_char -eq "#") {
                 $test_char = $line[$n]
@@ -20,10 +20,13 @@ for ($i = 0; $i -lt $content.length; $i++) {
                 $n++
             }
             $content_to_show = $line[($header_level + 1)..($line.length - 1)]
-            $end_content = $end_content + "<h$header_level>"
-
+            $end_content = $end_content + "<h$header_level>" + $content_to_show + "</h$header_level>"
+            break;
         }
-        ""
+        default {
+            $content_to_show = $line[0..($line.length - 1)]
+            $end_content = $end_content + "<p>" + $content_to_show + "</h>"
+        }
     }
 }
 
