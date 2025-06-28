@@ -1,7 +1,7 @@
 body {
     background-color: #ffff00;
     color: #ff00ff;
-    font-family: "Comic Sans MS", serif;
+    font-family: "Comic Mono", "Comic Sans MS", serif;
     font-size: 16px;
     padding: 0;
     margin: 0;
@@ -34,7 +34,7 @@ body#body.no-css.light *, body#body.no-css.light{
 
 h1, h2, h3, h4, h5, h6 {
     color: #ff0000;
-    font-family: "Jokerman", "Comic Sans MS", serif;
+    font-family: "Jokerman","Comic Mono", "Comic Sans MS", serif;
 }
 
 table, td, th {
@@ -91,4 +91,26 @@ h3, h3+p, h2, h2+p /*stack overflow again*/ {
 
 .comment {
     color: #017501;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/blockquote [the CSS in the example, edited a bit] */
+
+div:has(> blockquote) {
+  background-color: #ff00c8;
+  color: #000000;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+blockquote + p {
+  text-align: right;
 }

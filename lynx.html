@@ -12,7 +12,7 @@
         <noscript><a href = "no-js/lynx.html">this version works without js</a></noscript>
         <a href = "no-js/lynx.html">is this loading slowly/not loading? here's a version that should work faster! it also has even less CSS.</a>
         <h1>Why Lynx is objectively better than Gallagher (probably misinformation)</h1>
-        <div id="head-image"><img src = "imgs/lynx-v-gallagher.png" alt = "A comparison of two characters. Lynx has the text "></div><br />
+        <div id="head-image"><img src = "imgs/lynx/!lynx-v-gallagher.png" alt = "A comparison of two characters. Lynx has the text "></div><br />
         <button id = "css-toggle" onclick = "toggleReadability()">this is unreadable</button>
         <button id = "darkmode-toggle" onclick = "toggleDarkMode()">MY EYES</button>
         <div id="kommpairasion"></div>
@@ -61,8 +61,23 @@
                 "She and Pela [:3c :3c :3c :3c :3c :3c] both enjoy a series called 'Tales of the Winterlands'. Interestingly enough, until the conclusion of the Belobog story, it was apparently banned so that it didn't encourage people to leave the city. At one point, Lynx texts you saying (very excitedly) that she got a Tales of the Winterlands fanbook, which suggests that it was probably unbanned.",
                 "<h3 id = 'yuri'>Yuri</h3><i> or: :33333333333333333333333333333333333</i>",
                 "There is yuri :3c",
-                "Lynx's Companion Quest is... very straight and heterosexual [/j]. Basically, her older sister gets you to spy on her because she's worried about why"
+                "Lynx's Companion Quest is... very straight and heterosexual [/j]. Basically, her older sister gets you to spy on her because she's worried about who Lynx is planning to meet on the Snow Plains. Then you spy on her and Pela <s>having a date</s> going camping together. The story is actually way more emotional, but that part is more about Pela, and this is a page about Lynx.",
+                "Also, she has a cute <a href = 'https://honkai-star-rail.fandom.com/wiki/Light_Cone'>Light Cone</a> with her and Pela!"
 
+            ]
+
+            image_folder = "imgs/lynx"
+
+            quotes = [
+                {link: "", name: "Lynx", source: "Character Details", text: `The youngest daughter of the Landau family, and one of Belobog's best extreme environments explorers. <br /> She is highly capable of action despite her apparent lack of motivation. She only appears introverted and lazy to avoid unnecessary socialization. <br /> As for what counts as unnecessary socialization — "Um, aren't all socialization unnecessary?"`, explanation: "I love this so much, she's just so silly! :3c"},
+                {link: "", name: "Lynx", source: "Farther Than The Snow Plains", text: `It's all thanks to the Eternal Freeze. We can eat raw fish from 700 years ago!`, explanation: "lol"},
+                {link: "", name: "Lynx & Pela", source: "Farther Than The Snow Plains", text: `Pela: So awesome... I got to taste Lynxy's cooking and see the aurora... This Snow Plains adventure was the best!<br />Lynx: You look really happy. <br />Pela: Huh? Me? <br />Pela: Ahem! I—I'm not THAT happy, I, wh—what I mean is, uh...`, explanation: "omg they're so cute together!!!!!!!!!!! Pela is like so flustered they're so sweet "},
+                {link: "", name: "Trailblazer & Pela & Lynx", source: "Farther Than The Snow Plains", text: `[Trailblazer] : You weren't just here for the camping <br />Pela: I was going to say that... but now I suddenly don't want to. <br />Lynx: I understand what Pela really feels. You don't need to hide it.`, explanation: ""},
+                {link: "", name: "Lynx", source: "Message Status", text: `The user you have messaged is currently unavailable`, explanation: ""},
+                {link: "", name: "Lynx", source: "Character Story: Part <span style = 'font-variant: small-caps'>IV</span>", text: `After all, isn't it simple to just go from start to goal's end?`, explanation: ""},
+                {link: "", name: "Pela", source: "Voice Line: About Lynx", text: `Lynxy is one of my... Uh, Lynx is one of my... Ahem! Lynx is... one of Belobog's number one researchers, and... one of my best besties!`, explanation: ""},
+                {link: "", name: "Pela", source: "Note on a text Lynx wrote about food in the Snow Plains", text: `This won't do. Next time, I need to fill Lynxy's pockets with even more food!`, explanation: "Lynx was literally saying that she always brought enough food lmao"},
+                {link: "", name: "", source: "", text: ``, explanation: ""},
             ]
 
             setTimeout(loady, 0)
@@ -70,6 +85,7 @@
                 document.getElementById("kommpairasion").innerHTML += generateTable(source, true)
                 printEssay(essay, "essay")
             }   
+            generateQuotes(quotes)
         </script>
     </body>
 

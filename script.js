@@ -70,6 +70,31 @@ function generateTable(source, shuffle = false) {
     return table
 }
 
+function generateQuotes(array) {
+    //div = document.getElementById("quotes")
+    for (i = 0; i < array.length; i++) {
+        quote = getAndRemoveRandItem(array, [])
+        htmlstring = " <div><blockquote cite = '" + quote.link + "'><p>" + quote.text + "</p></blockquote><p>—" + quote.name + " <cite>" + quote.source + "</cite></p></div>"
+        html = elementify(htmlstring)
+        document.getElementById("quotes").appendChild(html)
+    }
+}
+
+/*
+base quote stucture from https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/blockquote
+<div>
+  <blockquote cite= 'quote.link'>
+    <p>
+      quote.text
+    </p>
+  </blockquote>
+  <p>—quote.name <cite>quote.source</cite></p>
+</div>
+
+
+*/
+
+
 //source is an array with rows amount of arrays where columns is the amount of items in the largest array; rows is the width of the table and columns is the height 
 
 function toggleReadability() {
