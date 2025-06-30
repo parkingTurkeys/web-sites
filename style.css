@@ -115,6 +115,10 @@ blockquote + p {
   text-align: right;
 }
 
+.explanation {
+    color: #ffff00;
+}
+
 /* this should be "fun" */
 
 #images {

@@ -72,9 +72,12 @@ function generateTable(source, shuffle = false) {
 
 function generateQuotes(array) {
     //div = document.getElementById("quotes")
-    for (i = 0; i < array.length; i++) {
+    lengthy = array.length
+    for (i = 0; i < lengthy; i++) {
+        
         quote = getAndRemoveRandItem(array, [])
-        htmlstring = " <div><blockquote cite = '" + quote.link + "'><p>" + quote.text + "</p></blockquote><p>—" + quote.name + " <cite>" + quote.source + "</cite></p></div>"
+        //console.log(quote)
+        htmlstring = " <div><blockquote cite = '" + quote.link + "'><p>" + quote.text + "</p></blockquote><p>—" + quote.name + " <cite><a href = '" + quote.link + "'>" + quote.source + "</a></cite></p><p class = 'explanation'>" + quote.explanation + "</div>"
         html = elementify(htmlstring)
         document.getElementById("quotes").appendChild(html)
     }
