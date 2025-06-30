@@ -20,9 +20,9 @@
         <div id="quotes" class = "text"></div> <!-- done -->
         <div id="images">
             <!--testing-->
-            <img src = "imgs/lynx/!lynx-v-gallagher.png" />
+            <!--<img src = "imgs/lynx/!lynx-v-gallagher.png" />
             <img src = "imgs/lynx/companion-mission.png" />
-            <img src = "imgs/lynx/light-cone.png" />
+            <img src = "imgs/lynx/light-cone.png" />-->
         </div> <!-- uh... -->
         <div id="sources" class = "text cite"> <!-- done [by hand :(] -->
             <span id = 1><a href = https://honkai-star-rail.fandom.com/wiki/Lynx/Combat#Abilities>[1] Lynx's Combat Mechanics | Honkai: Star Rail Wiki | Fandom</a></span><br />
@@ -71,7 +71,15 @@
 
             ]
 
-            image_folder = "imgs/lynx"
+            image_folder = "imgs/lynx/"
+
+            image_names = [
+                "!lynx-v-gallagher.png",
+                "companion-mission.png",
+                "light-cone.png"
+            ]
+
+            generateImages(image_folder, image_names)
 
             quotes = [
                 {link: "https://honkai-star-rail.fandom.com/wiki/Lynx/Lore#Character_Details", name: "Lynx", source: "Character Details", text: `The youngest daughter of the Landau family, and one of Belobog's best extreme environments explorers. <br /> She is highly capable of action despite her apparent lack of motivation. She only appears introverted and lazy to avoid unnecessary socialization. <br /> As for what counts as unnecessary socialization — "Um, aren't all socialization unnecessary?"`, explanation: "I love this so much, she's just so silly! :3c"},

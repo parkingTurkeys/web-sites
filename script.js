@@ -83,6 +83,18 @@ function generateQuotes(array) {
     }
 }
 
+function generateImages(folder, array) {
+    lengthy = array.length
+    for (i = 0; i < lengthy; i++) {
+        
+        img_name = getAndRemoveRandItem(array, [])
+        //console.log(quote)
+        htmlstring = "<img src = '" + folder + img_name + "' />"
+        html = elementify(htmlstring)
+        document.getElementById("images").appendChild(html)
+    }
+}
+
 /*
 base quote stucture from https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/blockquote
 <div>
