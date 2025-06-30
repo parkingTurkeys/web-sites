@@ -114,3 +114,19 @@ blockquote p::after {
 blockquote + p {
   text-align: right;
 }
+
+/* this should be "fun" */
+
+#images {
+    display: flex;
+    flex-wrap: wrap;
+    /*height: 20rem;*/
+}
+
+#images img {
+    max-height:20rem;
+    align-items: flex-start; 
+    object-fit: contain;
+    /*flex-basis: 0;
+    flex-grow: 1;*/
+}
