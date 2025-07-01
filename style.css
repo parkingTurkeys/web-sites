@@ -1,3 +1,69 @@
+/*
+@keyframes bounce {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    20% {
+        top: auto;
+        left: auto;
+        bottom: 0;
+        right:0;
+    }
+
+    40% {
+        bottom: auto;
+        right: auto;
+        top: 15rem;
+        left:0;
+    }
+
+    60% {
+        top: auto;
+        left: auto;
+        bottom: 0;
+        right:15rem;
+    }
+
+    80% {
+        top: auto;
+        right: auto;
+        bottom: 15rem;
+        left:0;
+    }
+
+    100% {
+        bottom: auto;
+        right: auto;
+        top: 0;
+        left:0;
+    }
+}
+*/
+
+/* https://stackoverflow.com/a/67493425 */
+
+@keyframes hor-movement {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes ver-movement {
+  from {
+    top: 0%;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+/* end */
+
 body {
     background-color: #ffff00;
     color: #ff00ff;
@@ -96,6 +162,25 @@ h3, h3+p, h2, h2+p /*stack overflow again*/ {
     color: #017501;
 }
 
+/* https://stackoverflow.com/a/67493425 */
+
+#bounce {
+    height: 10rem;
+    width: auto;
+    position: fixed;
+    animation-name: hor-movement, ver-movement;
+    animation-duration: 3.141s, 1.414s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+/* end */
+
+#no-height {
+    height: 0;
+}
+
 /* https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/blockquote [the CSS in the example, edited a bit] */
 
 div:has(> blockquote) {
@@ -127,6 +212,8 @@ blockquote + p {
   text-align: right;
 }
 
+/* end */
+
 .explanation {
     color: #ffff00;
 }
@@ -142,6 +229,8 @@ s {
 s::selection {
     text-decoration: underline rgb(255, 255, 255) .1em;
 }
+
+/* end */
 
 /* this should be "fun" */
 
