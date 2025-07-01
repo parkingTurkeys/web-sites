@@ -56,6 +56,9 @@ table {
 
 img {
     width: 50%;
+    border-style: solid;
+    border-width: 1rem;
+    border-color: #00f00f;
 }
 
 #head-image {
@@ -69,7 +72,7 @@ img {
 }
 
 .text {
-    font-family:'Times New Roman', Times, serif;
+    /*font-family:'Times New Roman', Times, serif;*/
     font-size: 1.25rem;
     margin: 5%;
     line-height: 2rem;
@@ -100,8 +103,17 @@ div:has(> blockquote) {
   color: #000000;
   margin: 10px auto;
   padding: 15px;
+  /*border-radius: 5px;*/
+}
+/* this didn't work :(
+body#body.no-css.light div:has(> blockquote) {
+  background-color: #b89cb2 !important;
+  color: #000000;
+  margin: 10px auto;
+  padding: 15px;
   border-radius: 5px;
 }
+*/
 
 blockquote p::before {
   content: "\201C";
@@ -117,6 +129,18 @@ blockquote + p {
 
 .explanation {
     color: #ffff00;
+}
+
+/* https://stackoverflow.com/a/69845243 */
+
+s {
+  text-decoration: underline .1em;
+  text-underline-offset: -.35em;
+  text-decoration-skip-ink: none;
+}
+
+s::selection {
+    text-decoration: underline rgb(255, 255, 255) .1em;
 }
 
 /* this should be "fun" */
