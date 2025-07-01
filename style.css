@@ -177,6 +177,10 @@ h3, h3+p, h2, h2+p /*stack overflow again*/ {
 
 /* end */
 
+.no-css #bounce {
+    display: none;
+}
+
 #no-height {
     height: 0;
 }
