@@ -73,6 +73,10 @@ body {
     margin: 0;
 }
 
+a {
+    font-style: italic;
+}
+
 body#body.light a {
     color:#0000ff;
 }

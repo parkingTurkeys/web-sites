@@ -32,6 +32,6 @@ for ($i = 0; $i -lt $content.length; $i++) {
 
 
 
-$template = "<!DOCTYPE html><html><head><title>$title</title><link rel = 'stylesheet' href = 'style.css' /><script src = 'script.js'></script><meta name='viewport' content='width=device-width, initial-scale=1' /></head><body id = 'body' class = 'css light' onload = 'checkPreferences()'><a href = 'index.html'>Home</a><button id = 'css-toggle' onclick = 'toggleReadability()'>this is unreadable</button><button id = 'darkmode-toggle' onclick = 'toggleDarkMode()'>MY EYES</button><div id = 'content'>$end_content</div></body></html>"
+$template = "<!DOCTYPE html><html><head><title>$title</title><link rel = 'stylesheet' href = 'style.css' /><script src = 'script.js'></script><meta name='viewport' content='width=device-width, initial-scale=1' /></head><body id = 'body' class = 'css light' onload = 'checkPreferences()'><a href = 'index.html' style = 'position: fixed; top: 0; right: 0; font-size: 4rem;'>Home</a><a href = 'index.html'>Home</a><button id = 'css-toggle' onclick = 'toggleReadability()'>this is unreadable</button><button id = 'darkmode-toggle' onclick = 'toggleDarkMode()'>MY EYES</button><div id = 'content'>$end_content</div></body></html>"
 # echo $template > "out/$Name.html" 
 Set-Content -Path "out/$Name.html" -Value $template -Encoding "utf8"
