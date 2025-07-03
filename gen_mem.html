@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mem text memimem generator mem</title>
+    </head>
+    <body>
+        <p id = "mem"></p>
+    </body>
+    <script>
+        let words_since_space = 0
+        length = prompt("how many words?")
+        const mems = [
+            "mem",
+            "mem",
+            "mem",
+            "mem",
+            "mem",
+            "mem",
+            "mem",
+            "mem",
+            "mem",
+            "mem",
+            "memi",
+            "memi",
+            "memi",
+            "memimem",
+            "memimem",
+            "memi",
+            "memimem",
+            "<b>mem</b>",
+            "<i>mem</i>",
+            "MEM",
+            "<b>MEM</b>"
+        ]
+        memtext = ""
+
+        for (i = 0; i < parseInt(length); i++) {
+            memtext += mems[Math.floor(Math.random() * mems.length)]
+            rand = Math.floor(Math.random() * 3)
+            if (rand == 0) {
+                memtext += " "
+                words_since_space = 0
+            } else {
+                words_since_space++
+            }
+
+            if (words_since_space > 3) {
+                memtext += " "
+            }
+        }
+
+        console.log(memtext)
+        document.getElementById("mem").innerHTML = memtext
+    </script>
+</html>
