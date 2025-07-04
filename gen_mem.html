@@ -109,5 +109,47 @@
 
         console.log(memtext)
         document.getElementById("mem").innerHTML = memtext
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const mrkdwning = urlParams.get('slack');
+        if (mrkdwning) {
+            mrkdwn()
+        }
+        
+        function replaceFunctionA(match, offset, string) {
+            return match.slice(0, 1) + " " + match.slice(1)
+        }
+
+        function replaceFunctionB(match, offset, string) {
+            console.log(match.slice(0, match.length))
+            return match.slice(0, match.length - 1) + " " + match.slice(match.length - 1)
+        }
+
+        function replaceFunctionB(match, offset, string) {
+            if (Math.random() > 0.5) {
+                return match
+            } else {
+                return match.slice(0, 1)
+            }
+        }
+
+
+        function mrkdwn() {
+            regex = new RegExp(/[^ ]<[bi]>/, "g")
+            //***x<i>***italicizedthing</i>x
+            memtext = memtext.replaceAll(regex, replaceFunctionA)
+            regex = new RegExp(/<\/[bi]>[^ ]/, "g")
+            //x<i>italicizedthing***</i>x***
+            memtext = memtext.replaceAll(regex, replaceFunctionB)
+            console.log(memtext)
+            memtext = memtext.replaceAll("<b>", "*")
+                
+            memtext = memtext.replaceAll("</b>", "*")
+            memtext = memtext.replaceAll("<i>", "_")
+            memtext = memtext.replaceAll("</i>", "_")
+            memtext = memtext.replaceAll("* ", replaceFunctionC)
+            memtext = memtext.replaceAll("_ ", replaceFunctionC)
+        }
+        navigator.clipboard.write(memtext)
     </script>
 </html>
