@@ -8,7 +8,18 @@
     </body>
     <script>
         let words_since_space = 0
+        let words_since_punctuation = 0
         length = prompt("how many words?")
+        const punctuation = [
+            "...",
+            "!",
+            ".",
+            "?",
+            ";",
+            ":",
+            "--",
+            "~"
+        ]
         const mems = [
             "mem",
             "mem",
@@ -30,12 +41,26 @@
             "<b>mem</b>",
             "<i>mem</i>",
             "MEM",
-            "<b>MEM</b>"
+            "<b>MEM</b>",
+            " ▮▮▮▮"
         ]
         memtext = ""
 
         for (i = 0; i < parseInt(length); i++) {
             memtext += mems[Math.floor(Math.random() * mems.length)]
+            rand = Math.floor(Math.random() * 5)
+            if (15 > words_since_punctuation > 0) {
+                if (rand == 0) {
+                    memtext += punctuation[Math.floor(Math.random() * punctuation.length)] + " "
+                    words_since_punctuation = 0
+                } else {
+                    words_since_punctuation++
+                }
+            } else if (words_since_punctuation >= 15) {
+                memtext += punctuation[Math.floor(Math.random() * punctuation.length)] + " "
+                words_since_punctuation = 0
+            }
+            
             rand = Math.floor(Math.random() * 3)
             if (rand == 0) {
                 memtext += " "
@@ -47,6 +72,7 @@
             if (words_since_space > 3) {
                 memtext += " "
             }
+            
         }
 
         console.log(memtext)
