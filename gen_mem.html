@@ -2,8 +2,14 @@
 <html>
     <head>
         <title>Mem text memimem generator mem</title>
+        <link rel = "stylesheet" href = "style.css" />
+        <script src = "script.js"></script>
     </head>
-    <body>
+    <body  id = "body" class = "css light" onload = "checkPreferences()">
+        <a href = "index.html" style = "position: fixed; top: 0; right: 0; font-size: 4rem; user-select: none; -webkit-user-select: none;">Home</a>
+        <div id = "no-height"><img id = "bounce" src = "imgs/mem/NPC_Mem_Artwork.png" /></div>
+        <button id = "css-toggle" onclick = "toggleReadability()">this is unreadable</button>
+        <button id = "darkmode-toggle" onclick = "toggleDarkMode()">MY EYES</button>
         <p id = "mem"></p>
     </body>
     <script>
@@ -42,12 +48,38 @@
             "<i>mem</i>",
             "MEM",
             "<b>MEM</b>",
+            "mem",
+            "mem",
+            "mem",
+            "mem",
+            "mem",
+            "mem",
+            "mem",
+            "mem",
+            "mem",
+            "mem",
+            "memi",
+            "memi",
+            "memi",
+            "memimem",
+            "memimem",
+            "memi",
+            "memimem",
+            "<b>mem</b>",
+            "<i>mem</i>",
+            "MEM",
+            "<b>MEM</b>",
             " ▮▮▮▮"
         ]
         memtext = ""
 
         for (i = 0; i < parseInt(length); i++) {
-            memtext += mems[Math.floor(Math.random() * mems.length)]
+            if (words_since_punctuation > 0) {
+                memtext += mems[Math.floor(Math.random() * mems.length)]
+            } else {
+                randItem = mems[Math.floor(Math.random() * mems.length)]
+                memtext += randItem.slice(0, 1).toUpperCase() + randItem.slice(1)
+            }
             rand = Math.floor(Math.random() * 5)
             if (15 > words_since_punctuation > 0) {
                 if (rand == 0) {
@@ -60,7 +92,7 @@
                 memtext += punctuation[Math.floor(Math.random() * punctuation.length)] + " "
                 words_since_punctuation = 0
             }
-            
+
             rand = Math.floor(Math.random() * 3)
             if (rand == 0) {
                 memtext += " "
