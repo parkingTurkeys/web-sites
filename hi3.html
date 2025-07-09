@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Why you should play HI3 (and also what you shouldn't expect)</title>
+        <link href = "style.css" rel = "stylesheet">
+        <script src = "script.js"></script>
+        <script src = "useful.js"></script>
+        <meta property="og:title" content="Why Lynx is objectively better than Gallagher (probably misinformation)" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://p-t.hackclub.app/web-sites/lynx.html" />
+        <meta property="og:image" content="https://p-t.hackclub.app/web-sites/imgs/hi3/header.jpg" />
+        <meta property="og:description" 
+            content="HI:333333333333333 [:3c :3c :3c :3c :3c]" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body id = "body" class = "css light" onload = "checkPreferences()">
+        <a href = "index.html" style = "position: fixed; top: 0; right: 0; font-size: 4rem;">Home</a>
+        <div id = "no-height"><img id = "bounce" src = "imgs/hi3/AICHAN.png" /></div>
+        <h1>Why You Should Play HI3 [Honkai Impact 3rd]</h1>
+        <div id="head-image"><img src = "imgs/hi3/header.jpg" alt = ""></div><br />
+        <button id = "css-toggle" onclick = "toggleReadability()">this is unreadable</button>
+        <button id = "darkmode-toggle" onclick = "toggleDarkMode()">MY EYES</button>
+        <div id="kommpairasion"></div> <!-- done -->
+        <div id="essay" class = "text"></div> <!-- done -->
+        <div id="sources" class = "cite"> <!-- done [ by hand :( ] -->
+            <span id = 1><a href = "https://docs.google.com/document/d/11atbmqWYIhgGxjFWdEdcAmoaPY6lDFLUsidweqYWjUw/edit?tab=t.0">I got some info from this doc, however it is slightly outdated in places</a></span><br />
+            
+        </div>
+        <div id="quotes" ></div> <!-- done -->
+        <div id="images">
+            <!--testing-->
+            <!--<img src = "imgs/lynx/!lynx-v-gallagher.png" />
+            <img src = "imgs/lynx/companion-mission.png" />
+            <img src = "imgs/lynx/light-cone.png" />-->
+        </div> <!-- done -->
+        
+        <script>
+            //alert("this is probably misinformation o(〃＾▽＾〃)o")
+            source = [
+               
+            ]
+            //note: add e2 so links work
+            essay = [
+                "<h2>A [spoiler-free] summary of HI3</h2>",
+                "Note: HI3 is <i>not</i> 'the third Honkai Impact game', it's a story about the third Honkai Impact.",
+                "(for this I'll be going with Part 1 because that's the start)",
+                "Basically, in the start you play as Kiana Kaslana. Something important about this is that, unlike some other gacha games, she is <i>not</i> a self insert.",
+                "There is a force called the Honkai. It corrupts people and creates monsters--if you've played HSR, it is somewhat similar to Stellarons/the Fragmentum.",
+                "<h2>Really fun things about HI3</h2>",
+                "The fighting is pretty fun! If you're on a computer, you might want to play with the controls a bit. It focuses a lot more on dodging. [I've heard that in Genshin, dodging is basically impossible--here, if you don't dodge, you won't be able to survive]",
+                "Unlike other games [HSR], characters have <i>multiple</i> 'battlesuits'. This means the story focuses much more on a few characters over a longer period of time, instead of switching focus a lot so they can sell more of the new characters.",
+                "Also, until a certain point, chapters are replayable! There is also a skip button.",
+                "You get trial characters after Chapter VI [6], so the gacha isn't <i>required</i>",
+                "The characters are really fun! Also there is a lot of implied yuri :3c",
+                "<h2>Stuff that might be bad</h2>",
+                "<ul>",
+                "<li>The interface is a bit jank--unlike HSR and Genshin, it isn't stylized to the game</li>",
+                "<li>The outfits are... questionable</li>",
+                "<li>There is very bad powercreep</li>",
+                "<li><b>There are no playable men</b></li>",
+                "<li>The story requires reading a lot of manga (and visual novels) if you want the full story</li>",
+                "<li>It's a predatory gacha game (the gacha is quite bad)</li>",
+                "<li>Long and very story based, if you don't like story you shouldn't play it</li>",
+                "</ul>",
+                "<h2>How to play HI3</h2>",
+                "If you still want to play HI3, it's pretty easy.",
+                "<h3>Phone</h3>",
+                "You need a large amount of storage, like over 20GB free. It is downloadable in the App Store!",
+                "<h3>Computer</h3>",
+                "Right now, HI3 takes up over 50GB of storage--I would suggest having a <i>lot</i> of storage. Also, the anticheat means that it needs admin access.",
+                "<h3>IMPORTANT THINGS</h3>",
+                "<b>1. Don't pull until at least 2 weeks have passed.</b> This is very important, you want to know what characters you want! Also, never spend crystals on Dorm Supply. Also, don't pull on starter supply. ONLY PULL ON DEDICATED SUPPLY!!! you <i>will</i> regret it.",
+                "2. Apparently, Valkyries/Battlesuits need their weapons to function and also you should always use supports (I'm terrible at teambulding so idk)",
+                "3. Starter's Manual lasts for 90 days. Do it. If it asks you to skip ahead in the story, either speedrun the story or speedrun that part and watch it on YouTube later.",
+                "4. Do dorm errands every day! They can give good  rewards. Overall, whenever there's a red dot, click on it.",
+                "5. If you want to be really hardcore and get a lot of crystals, then google stuff, I suck at this :)",
+                "6. <b>USE A STORY GUIDE LIKE SERIOUSLY I'M NOT JOKING</b> <a href = 'https://hoyostans.be/explore/honkai-impact-3rd/story-guide-hi3/'>This one is good!</a>",
+                "7. Save crystals for a character you like! ",
+                "8. Seriously, unless you feel like it, most of the stuff is optional--the story can be played without interacting with most other things!",
+                "9. If you want to play the visual novels, there are fan translations linked in the story guide--however, if you want one that works in portrait mode, I made something--it's still a bit broken but it works! : <a href = https://parkingturkeys.github.io/hi3-vn-reader/online.html>https://parkingturkeys.github.io/hi3-vn-reader/online.html</a>",
+                "<h2>Extra notes</h2>",
+                "HI3 is set in the same overall universe as HSR and maybe Genshin[?], but it's very confusing. Welt in HSR is the same Welt [Yang not Joyce] as in HI3, however all other characters just happen to look alike."
+
+            ]
+
+            image_folder = "imgs/hi3/"
+
+            image_names = [
+
+            ]
+
+            generateImages(image_folder, image_names)
+
+            quotes = [
+                {link: "https://honkaiimpact3.fandom.com/wiki/Honkai_Impact_3rd#Game_Introduction", name: "", source: "The Introduction", text: `On earth, a catastrophe known as the "Honkai" has plagued mankind throughout history.
+
+The Honkai was created alongside civilization, and creatures known as the "Honkai beasts", deadwalkers, as well as a paranormal humanoid - The Herrscher - were born within it.
+
+To fight the Honkai invasion, mankind created an organization, called the Schicksal. This organization was assembled by mankind as a means of resistance against the Honkai. Its creation also marked the beginning of a war, an eternal battle where no side has claimed victory. The fighting has continued to this day...
+
+Up until year 2013, when the 3rd Honkai War broke out in eastern Nagazora... `, explanation: "This is a good introduction"},
+            ]
+
+            setTimeout(loady, 0)
+            function loady() {
+                document.getElementById("kommpairasion").innerHTML += generateTable(source, true)
+                printEssay(essay, "essay")
+            }   
+            generateQuotes(quotes)
+        </script>
+    </body>
+
+</html>
